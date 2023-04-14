@@ -59,21 +59,23 @@ function ToDoPage() {
   }
 
   return (
-    <main>
-      <h1>
-        {numberOfCompletedTasks}/{numberOfTotalTasks} Complete
-      </h1>
-      <h2>{getMessage()}</h2>
-      <TaskForm onAdd={addTask} />
-      {tasks.map((task, index) => (
-        <Task
-          {...task}
-          onRename={(newName) => renameTask(index, newName)}
-          onTrash={() => removeTask(index)}
-          onToggle={(done) => updateTaskDone(index, done)}
-        />
-      ))}
-    </main>
+    <div className="body2">
+      <main>
+        <h1>
+          {numberOfCompletedTasks}/{numberOfTotalTasks} Complete
+        </h1>
+        <h2>{getMessage()}</h2>
+        <TaskForm onAdd={addTask} />
+        {tasks.map((task, index) => (
+          <Task
+            {...task}
+            onRename={(newName) => renameTask(index, newName)}
+            onTrash={() => removeTask(index)}
+            onToggle={(done) => updateTaskDone(index, done)}
+          />
+        ))}
+      </main>
+    </div>
   );
 }
 
