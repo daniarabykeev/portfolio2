@@ -4,6 +4,7 @@ import MainLayouts from "../layouts/MainLayouts";
 import HomePage from "../pages/HomePage/HomePage";
 import ToDoPage from "../pages/ToDoPage/ToDoPage";
 import PostsPage from "../pages/PostsPage/PostsPage";
+import UsersPage from "../pages/UsersPage/UsersPage";
 
 function MainRoutes() {
   return (
@@ -13,6 +14,7 @@ function MainRoutes() {
           <Route path="/" element={<HomePage />} />
           <Route path="/todo" element={<ToDoPage />} />
           <Route path="/posts" element={<PostsPage />} />
+          <Route path="/users" element={<UsersPage />} />
         </Route>
       </Routes>
     </div>
